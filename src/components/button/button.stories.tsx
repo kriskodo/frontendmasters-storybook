@@ -12,7 +12,7 @@ const meta: Meta<typeof Button> = {
     kind: { control: 'select', options: buttonKinds },
     size: { control: 'select', options: buttonSizes },
   },
-  parameters: { viewport: { defaultViewport: 'mobile1' }, themes: { themeOverride: 'light' } },
+  parameters: { viewport: { defaultViewport: 'mobile1' } },
 };
 
 type Story = StoryObj<typeof Button>;

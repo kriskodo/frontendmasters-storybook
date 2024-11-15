@@ -1,12 +1,12 @@
 import { ComponentProps } from 'react';
 import { CalloutProps, variants } from './callout.variants';
 
-type Props = ComponentProps<'div'> & CalloutProps & { title: string };
+type Props = { title: string } & ComponentProps<'div'> & CalloutProps;
 
 export const Callout: React.FunctionComponent<Props> = ({
+  title,
   color = 'primary',
   size = 'medium',
-  title,
   children,
   ...rest
 }) => {

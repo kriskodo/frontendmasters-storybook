@@ -23,7 +23,7 @@ export const TextArea = ({ label, required, maxLength, ...props }: TextAreaProps
       <textarea
         className={clsx(
           'min-h-[200px] w-full min-w-[300px] max-w-[500px] gap-2 rounded-md bg-transparent bg-white p-4 text-sm placeholder-slate-400 shadow-sm ring-1 ring-inset ring-slate-500 invalid:bg-danger-50 focus:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-600 disabled:cursor-not-allowed disabled:bg-slate-50 dark:bg-slate-800 dark:placeholder-slate-300',
-          tooLong && 'ring-2 ring-danger-900 dark:ring-danger-900',
+          tooLong && 'ring-2 ring-danger-700 dark:ring-danger-800',
         )}
         {...props}
         onChange={(e) => {
@@ -37,7 +37,13 @@ export const TextArea = ({ label, required, maxLength, ...props }: TextAreaProps
 
       {maxLength && (
         <div className="gap-1.4 flex justify-end text-xs">
-          <p className={clsx(tooLong ? 'text-danger-300' : 'text-slate-100')}>
+          <p
+            className={clsx(
+              tooLong
+                ? 'text-danger-600 dark:text-danger-300'
+                : 'test-slate-500 dark:text-slate-100',
+            )}
+          >
             <span data-testid="length">{length}</span>/{maxLength}
           </p>
         </div>
