@@ -49,7 +49,9 @@ export default meta;
 type Story = StoryObj<typeof TextArea>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    maxLength: 100,
+  },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const textArea = canvas.getByRole('textbox');
