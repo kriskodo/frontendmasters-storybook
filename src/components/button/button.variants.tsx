@@ -5,11 +5,13 @@ export type ButtonProps = VariantProps<typeof buttonVariants>;
 const kind = {
   primary: [
     'bg-primary-600',
-    'hover:bg-primary-700, active:bg-primary-800',
+    'hover:bg-primary-700',
+    'active:bg-primary-800',
     'disabled:bg-primary-200',
   ],
   secondary: [
-    'bg-secondary-600',
+    'bg-secondary-700',
+    'text-white',
     'hover:bg-secondary-700',
     'active:bg-secondary-800',
     'disabled:bg-secondary-200',
@@ -20,9 +22,9 @@ const kind = {
     'disabled:bg-danger-200',
   ],
   ghost: [
-    'bg-slate-400',
-    'hover:bg-slate-500',
-    'text-primary-600',
+    'bg-slate-500',
+    'hover:bg-slate-600',
+    'text-secondary-50',
     'hover:text-slate-950',
     'active:text-slate-800',
     'disabled:bg-slate-200',
