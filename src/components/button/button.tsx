@@ -1,4 +1,4 @@
-import { ButtonProps, buttonVariants } from './button-variants';
+import { ButtonProps, buttonVariants } from './button.variants';
 
 export type Props = React.ComponentProps<'button'> & ButtonProps;
 
