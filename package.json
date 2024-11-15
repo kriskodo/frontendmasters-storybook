@@ -12,6 +12,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky",
+    "test": "npx test-storybook",
     "chromatic": "npx chromatic --project-token=chpt_4b68223216662a6"
   },
   "lint-staged": {

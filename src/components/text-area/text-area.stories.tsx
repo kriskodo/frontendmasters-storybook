@@ -72,7 +72,7 @@ export const MaxLength: Story = {
     const canvas = within(canvasElement);
     const textArea = canvas.getByRole('textbox');
     await userEvent.type(textArea, lorem);
-    expect(textArea).toHaveClass('ring-danger-500');
+    expect(textArea).toHaveClass('ring-danger-900');
   },
 };
 
