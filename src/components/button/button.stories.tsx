@@ -1,29 +1,28 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Button } from './button';
 
-const defaultProps = { children: 'Button', variant: 'primary', size: 'medium', disabled: false };
-
 const meta: Meta = {
-  title: 'Button',
+  title: 'Components/Button',
   component: Button,
-  args: defaultProps,
+  args: { children: 'Button', kind: 'primary', size: 'medium', disabled: false },
   argTypes: {
     children: { control: 'text' },
     disabled: { control: 'boolean' },
-    variant: { control: 'select' },
+    kind: { control: 'select' },
     size: { control: 'select' },
   },
+  parameters: { viewport: { defaultViewport: 'tablet' } },
 };
 
 type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {};
 
-export const Secondary: Story = { args: { variant: 'secondary' } };
+export const Secondary: Story = { args: { kind: 'secondary' } };
 
-export const Destructive: Story = { args: { variant: 'destructive' } };
+export const Destructive: Story = { args: { kind: 'destructive' } };
 
-export const Ghost: Story = { args: { variant: 'ghost' } };
+export const Ghost: Story = { args: { kind: 'ghost' } };
 
 export const Small: Story = { args: { size: 'small' } };
 

@@ -1,9 +1,9 @@
 import { useContext, useState } from 'react';
 import { Button } from '../button';
-import { Input } from '../input';
 import { Checkbox } from '../checkbox';
-import { TaskListContext } from './task-list-context';
 import { Icon } from '../icon';
+import { Input } from '../input';
+import { TaskListContext } from './task-list-context';
 
 export const TaskList = () => {
   const [newTask, setNewTask] = useState('');
@@ -26,7 +26,7 @@ export const TaskList = () => {
         />
         <div className="flex justify-end gap-2">
           <Button disabled={!newTask}>Add Task</Button>
-          <Button variant="secondary" onClick={() => setNewTask('')}>
+          <Button kind="secondary" onClick={() => setNewTask('')}>
             Clear
           </Button>
         </div>
@@ -42,7 +42,7 @@ export const TaskList = () => {
               onChange={() => toggleTask(task.id)}
               className="w-full rounded-md px-2 py-2 hover:bg-slate-100 dark:hover:bg-slate-700"
             />
-            <Button variant="destructive" size="small" onClick={() => removeTask(task.id)}>
+            <Button kind="destructive" size="small" onClick={() => removeTask(task.id)}>
               <Icon type="x" />
             </Button>
           </div>

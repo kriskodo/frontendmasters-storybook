@@ -1,14 +1,8 @@
-import clsx from 'clsx';
-import styles from './button.module.css';
+import { ButtonProps, buttonVariants } from './button-variants';
 
-export type ButtonProps = React.ComponentProps<'button'> & {
-  variant: 'primary' | 'secondary' | 'destructive' | 'ghost';
-  size: 'small' | 'medium' | 'large';
-};
+export type Props = React.ComponentProps<'button'> & ButtonProps;
 
-export const Button = (props: ButtonProps) => {
-  const { variant = 'primary', size = 'medium', className, ...rest } = props;
-  return (
-    <button className={clsx(styles.button, styles[variant], styles[size], className)} {...rest} />
-  );
+export const Button = (props: Props) => {
+  const { kind = 'primary', size = 'medium', className, ...rest } = props;
+  return <button className={buttonVariants({ kind, size, className })} {...rest} />;
 };
