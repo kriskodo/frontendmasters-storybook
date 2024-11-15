@@ -31,7 +31,7 @@ const color = {
 const size = {
   small: ['w-[240px]', 'h-[480px]', 'text-sm'],
   medium: ['w-[324px]', 'h-[480px]', 'text-md'],
-  large: ['w-[324px]', 'h-[480px]', 'text-md', 'text-md'],
+  large: ['w-[360px]', 'text-lg'],
 };
 
 export type CalloutProps = VariantProps<typeof variants>;
